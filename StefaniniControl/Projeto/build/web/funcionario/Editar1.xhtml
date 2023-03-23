@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="FuncionarioEditDlg" widgetVar="FuncionarioEditDialog" modal="true" resizable="false" appendTo="@(body)" header="Alterar Funcionários">
+            <h:form id="FuncionarioEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="1" rendered="#{funcionarioController.funcionario != null}">
+                        <p:outputLabel for="codigofuncionario" value="CÓDIGO FUNCIONÁRIO"/>
+                        <p:inputText id="codigofuncionario" value="#{funcionarioController.funcionario.codigoFuncionario}" title="Código" required="true" requiredMessage="Código Obrigatório"/>
+                       
+                        <p:outputLabel value="NOME" for="nome" />
+                        <p:inputText id="nome" value="#{funcionarioController.funcionario.nome}" title="Nome" required="true" requiredMessage="Nome Obrigatório"/>
+                        
+                        <p:outputLabel value="EMAIL" for="email" />
+                        <p:inputText id="email" value="#{funcionarioController.funcionario.email}" title="Email" required="true" requiredMessage="Email Obrigatório"/>
+                        
+                        <p:outputLabel value="CPF" for="cpf" />
+                        <p:inputMask value="#{funcionarioController.funcionario.cpf}" mask="999.999.999-99" id="cpf" title="Cpf" required="true" requiredMessage="Cpf Obrigatório"/>
+                        
+                        <p:outputLabel value="ÁREA" for="area" />
+                        <p:inputText id="area" value="#{funcionarioController.funcionario.area}" title="Área" required="true" requiredMessage="Área Obrigatória"/>
+                        
+                        <p:outputLabel value="MODELO EQUIPAMENTO" for="modeloequipamento" />
+                        <p:inputText id="modeloequipamento" value="#{funcionarioController.funcionario.modeloEquipamento}" title="Modelo Equipamento" required="true" requiredMessage="Modelo Equipamento Obrigatório"/>
+                        <h:form>
+                        <h:panelGrid columns="2" style="margin-bottom:5px" cellpadding="5">
+                        <h:outputText value="CARGO:" />
+                        <p:selectOneButton value="#{funcionarioController.funcionario.cargo}" required="true" requiredMessage="Cargo Obrigatório">
+                        <f:selectItem itemLabel="Analista de Sistemas" itemValue="Analista de Sistemas" />
+                        <f:selectItem itemLabel="Desenvolvedor" itemValue="Desenvolvedor" />
+                        <f:selectItem itemLabel="Suporte Técnico" itemValue="Suporte Técnico" />
+                         </p:selectOneButton>
+                        </h:panelGrid>
+                        </h:form>
+                        <p:outputLabel value="CÓDIGO EQUIPAMENTO" for="codigoequipamento" />
+                        <p:inputText id="codigoequipamento" value="#{funcionarioController.funcionario.codigoEquipamento}" title="Código Equipamento" required="true" requiredMessage="Código Equipamento Obrigatório"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{funcionarioController.atualizar}" value="Salvar" update="display,:FuncionarioListForm:datalist,:growl" oncomplete="handleSubmit(args, 'FuncionarioEditDialog');"/>
+                    <p:commandButton value="Cancelar" onclick="FuncionarioEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
+

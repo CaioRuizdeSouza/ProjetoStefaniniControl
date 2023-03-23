@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<head>
+    <meta charset="UTF-8">
+    </meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
+    <title>Document</title>
+    <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgb(0,0,0);
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(3,3,120,1) 17%, rgba(0,83,136,1) 79%, rgba(41,211,218,1) 100%);
+        background-size: 100%;
+    }
+    .logo{
+        background-image: url(https://stefanini.com/en/wp-content/uploads/sites/2/2022/06/Logo_StefaniniGroup_2020_White-1.png);
+        width: 30%;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        background-repeat: no-repeat;
+    }
+    .header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .title{
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+    .text1{
+        display: flex;
+        font-size: medium;
+        justify-content: center;
+        color: white;
+        text-align: justify;
+        padding: 10px;
+    }
+    .link{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .bordao{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 20px;
+        color: white;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    .link button{
+        width: 168px;
+        height: 30px;
+        font-weight: bold;
+        color: black;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+    <div class="logo">
+    </div>
+    </div>
+    <div class="title">
+        <h2>Bem-Vindo ao sistema de controle de patrimônio</h2>
+    </div>
+    <div class="text1">
+    Ter um sistema de controle de estoque de desktop é fundamental para qualquer empresa. Com o nosso sistema de controle de estoque de desktop ajuda a prevenir perdas e roubos, 
+    permitindo o monitoramento das movimentações de produtos e identificando possíveis desvios ou problemas de segurança. Isso porque a gestão adequada do estoque é essencial para 
+    garantir o bom funcionamento das operações, o atendimento ao cliente e a saúde financeira da empresa.
+    </div>
+    <div class="bordao">
+        - Controle seus produtos, controle seu sucesso!
+        <br></br> <br></br> <br></br>
+        - Gerencie seu estoque com facilidade e precisão com nossa plataforma.
+    </div>
+    <div class="link">
+        <button onclick="acessar()">
+    <h:link outcome="/funcionario/Listar1" value="Ver Funcionarios"/>
+    </button>
+        
+        <button onclick="acessar2()">
+    <h:link outcome="/funcionario/Cadastro" value="Cadastrar Funcionários"/>
+    </button>
+    </div>
+</body>
+</html>

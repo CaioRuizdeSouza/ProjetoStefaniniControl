@@ -1,0 +1,61 @@
+.ui-widget {
+    font-size: 12px !important;
+}
+.ui-layout-north {
+    z-index: 20 !important;
+    overflow: visible !important;
+}
+.ui-layout-north .ui-layout-unit-content {
+    overflow: visible !important;
+}
+.ui-widget-header {
+    text-align: center;
+    text-transform: uppercase;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(3,3,120,1) 17%, rgba(0,83,136,1) 79%, rgba(41,211,218,1) 100%);
+}
+.ui-button {
+    margin-top: 10px !important;
+}
+.ui-layout-unit-content {
+background: black;
+}
+.ui-layout-unit {
+    background: black;
+}
+.ui-widget-content {
+    border: black;
+}
+.ui-panel .ui-panel-titlebar {
+    padding: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(3,3,120,1) 17%, rgba(0,83,136,1) 79%, rgba(41,211,218,1) 100%);
+}
+.ui-panel .ui-panel-content {
+    border: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(3,3,120,1) 17%, rgba(0,83,136,1) 79%, rgba(41,211,218,1) 100%);
+    padding: 0.5em 1em;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #a8a8a8;
+}
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(3,3,120,1) 17%, rgba(0,83,136,1) 79%, rgba(41,211,218,1) 100%);
+}
+.ui-panel{
+    padding: 0px 0px 0px ;
+    background: black
+}
+.ui-widget-header {
+    border: 1px solid #a8a8a8;
+    color: #fff;
+    text-shadow: 0px 0px 0px;
+}
+
+body{
+    padding-top: 170px;
+    background: black;
+}
